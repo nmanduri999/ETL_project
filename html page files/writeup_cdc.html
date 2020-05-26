@@ -10,7 +10,7 @@
 <body>
     <h1 class="text-center" style ="font-size: 2em">
         CDC Data: Extract/Transform/Load Write-up       
-      </h1>
+      </h1><br>
     <div class="container">
             <div class="row">
             <ul class="navigation">
@@ -49,6 +49,26 @@
     <p><a href = "#top">Top</a></p>   
     <a name="Load"></a><h3>Load the data</h3>
     <p>Load the data into a database. Steps taken to load the data.</p>
+    <p> 1. Having issues with Back up and Restore.While restoring John hopkins data encountred the error message</p>
+    <img class="my_img" src="../covid_data_CDC/Load_data_1.png" >
+    <img class="my_img" src="../covid_data_CDC/Load_data_2.png" >
+    <img class="my_img" src="../covid_data_CDC/Back_up and Restore_Error.png" >    
+    <p> 2. Importing John Hopkins CSV directly and converting into a DataFrame</p>
+    <img class="my_img" src="../covid_data_CDC/Load_data_3.png" >
+    <p> 3. Create a database connection in pandas after creating a empty database</p>
+    <img class="my_img" src="../covid_data_CDC/Load_data_4.png" >
+    <p> 4. Load the DataFremes into database</p>
+    <img class="my_img" src="../covid_data_CDC/Load_data_5.png" >
+    <img class="my_img" src="../covid_data_CDC/Load_data_6.png" >
+    <p> 5. Merge the data from John Hopkins and CDC on State</p>
+    <img class="my_img" src="../covid_data_CDC/Load_data_7.png" >
+    <p> 6. Load the combined DataFreme into database</p>
+    <img class="my_img" src="../covid_data_CDC/Load_data_8.png" >
+    <p> 7. Confirm table names exist in database via pandas commands</p>
+    <img class="my_img" src="../covid_data_CDC/Load_data_9.png" >
+    <p> 7. Validate data exist in database using pgAdmin</p>
+    <img class="my_img" src="../covid_data_CDC/Load_data_10.png" >
+
     <p><a href = "#top">Top</a></p>
 
 </body>

@@ -1,7 +1,7 @@
 import pandas as pd
 
 #create dataframe
-city_df = "cdc_may_group_data.csv"
+city_df = "combined_data.csv"
 city_df = pd.read_csv(city_df)
 # city_df = city_df.set_index('state')
 
