@@ -27,37 +27,37 @@
     <a name="Extract"></a><h3>* **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc)</h3>
     Extracted the data from the following sources: </p>
     <p>1. <u> https://data.world/associatedpress/johns-hopkins-coronavirus-case-tracker</u>, where an embedded <a href= "https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">link</a> on its overview page have led us to find the daily csv files on git hub.</p>
-    <img class="my_img" src="criselda_ETL/john_hopkins_tracker.png" >
-    <img class="my_img" src="criselda_ETL/john_hopkins_tracker_2.png" >
+    <img class="my_img" src="../criselda_ETL/john_hopkins_tracker.png" >
+    <img class="my_img" src="../criselda_ETL/john_hopkins_tracker_2.png" >
     <p>2. Download the CSV files one by one: Go to each daily dataset for April 20 to May 20. You will see "Raw" button on the top right side of the dataset. Press "Alt" and then left click the "Raw" button. The whole CSV will download in your system and save to the designated folder where the jupyter notebook is also saved.</p>
-    <img class="my_img" src="criselda_ETL/john_hopkins_tracker_3.png" >
+    <img class="my_img" src="../criselda_ETL/john_hopkins_tracker_3.png" >
     <p><a href = "#top">Top</a></p>
     <a name="Transform"></a><h3>* **T**ransform: what data cleaning or transformation was required. </h3>
     <p>The type of transformation needed for this data are executed in the following steps:</p>
     <p>1. Use pandas, glob, and numpy modules on jupyter notebook. Pull the files using glob from the CSV file local folder location.</p>    
-    <img class="my_img" src="criselda_ETL/Transform_pic_1.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_1.png" >
     <p>2.	Use a generator expression to read the files, assign(), to create a new column, and concat Dataframes</p>    
-    <img class="my_img" src="criselda_ETL/Transform_pic_2.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_2.png" >
     <p>3.	Rename the index column from ‘Province_State’  to ‘state’ to align index data with my teammates file</p>    
-    <img class="my_img" src="criselda_ETL/Transform_pic_3.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_3.png" >
     <p>4.	Drop the columns that are not needed for analysis (e.g. 'filename','UID' )</p>    
-    <img class="my_img" src="criselda_ETL/Transform_pic_4.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_4.png" >
     <p>5.	Drop rows that does not contain data</p>    
-    <img class="my_img" src="criselda_ETL/Transform_pic_5.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_5.png" >
     <p>6.	Replace all “NaN” cells with zeros</p>    
-    <img class="my_img" src="criselda_ETL/Transform_pic_6.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_6.png" >
     <p>7.	Change the data type of columns that contains numbers from object to float64 to be able to perform numeric calculations.</p>    
-    <img class="my_img" src="criselda_ETL/Transform_pic_7.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_7.png" >
     <p>8.	Group the data by ‘state’ by summing up the values.</p>    
-    <img class="my_img" src="criselda_ETL/Transform_pic_8.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_8.png" >
     <p>9.	Save the dataframe into CSV file as john_hopkins.csv</p>    
-    <img class="my_img" src="criselda_ETL/Transform_pic_9.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_9.png" >
     <p>10.	Merge file to teammates file
     <p><a href = "#top">Top</a></p>
     <a name="Load"></a><h3>* **L**oad: the final database, tables/collections, and why this was chosen.</h3>
     <p>1.	Create etl_db in postgres</p>    
-    <img class="my_img" src="criselda_ETL/load_data_1.png" >
-    <img class="my_img" src="criselda_ETL/load_data_2.png" >
+    <img class="my_img" src="../criselda_ETL/load_data_1.png" >
+    <img class="my_img" src="../criselda_ETL/load_data_2.png" >
 
     <P><a href = "#top">Top</a></P>
 </body>
