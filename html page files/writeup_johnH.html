@@ -24,41 +24,55 @@
             </ul>
          </div>
     <p>
-    <a name="Extract"></a><h3>* **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc)</h3>
+    <a name="Extract"></a><h3>Extract:</h3>
     Extracted the data from the following sources: </p>
     <p>1. <u> https://data.world/associatedpress/johns-hopkins-coronavirus-case-tracker</u>, where an embedded <a href= "https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">link</a> on its overview page have led us to find the daily csv files on git hub.</p>
     <img class="my_img" src="../criselda_ETL/john_hopkins_tracker.png" >
     <img class="my_img" src="../criselda_ETL/john_hopkins_tracker_2.png" >
-    <p>2. Download the CSV files one by one: Go to each daily dataset for April 20 to May 20. You will see "Raw" button on the top right side of the dataset. Press "Alt" and then left click the "Raw" button. The whole CSV will download in your system and save to the designated folder where the jupyter notebook is also saved.</p>
+    <p>2. downloaded 30 CSV files one by one by doing the following steps: </p>
+    <ul>
+        <li>a.	Go to each daily dataset for April 20 to May 20. </li>
+        <li>b.	Place the cursor to the "Raw" button on the top right side of the dataset. </li>
+        <li>c.	Press "Alt" and then left click the "Raw" button. </li>
+        <li>d.	The whole CSV downloaded in the system automatically </li>
+        <li>e.	Saved to the designated folder where the jupyter notebook is also saved.</li>
+    </ul>
     <img class="my_img" src="../criselda_ETL/john_hopkins_tracker_3.png" >
     <p><a href = "#top">Top</a></p>
-    <a name="Transform"></a><h3>* **T**ransform: what data cleaning or transformation was required. </h3>
+    <a name="Transform"></a><h3>Transform: </h3>
     <p>The type of transformation needed for this data are executed in the following steps:</p>
-    <p>1. Use pandas, glob, and numpy modules on jupyter notebook. Pull the files using glob from the CSV file local folder location.</p>    
+    <p>1.	Dependencies for John Hopkins data are pandas, glob, and numpy modules on jupyter notebook. The we listed all files using glob from the CSV file local folder.</p>    
     <img class="my_img" src="../criselda_ETL/Transform_pic_1.png" >
     <p>2.	Use a generator expression to read the files, assign(), to create a new column, and concat Dataframes</p>    
     <img class="my_img" src="../criselda_ETL/Transform_pic_2.png" >
     <p>3.	Rename the index column from ‘Province_State’  to ‘state’ to align index data with my teammates file</p>    
     <img class="my_img" src="../criselda_ETL/Transform_pic_3.png" >
-    <p>4.	Drop the columns that are not needed for analysis (e.g. 'filename','UID' )</p>    
+    <p>4.	Dropped the column for rows that contains another data type besides Nan</p>    
     <img class="my_img" src="../criselda_ETL/Transform_pic_4.png" >
+    <img class="my_img" src="../criselda_ETL/Transform_pic_4_1.png" >
     <p>5.	Drop rows that does not contain data</p>    
     <img class="my_img" src="../criselda_ETL/Transform_pic_5.png" >
     <p>6.	Replace all “NaN” cells with zeros</p>    
     <img class="my_img" src="../criselda_ETL/Transform_pic_6.png" >
     <p>7.	Change the data type of columns that contains numbers from object to float64 to be able to perform numeric calculations.</p>    
     <img class="my_img" src="../criselda_ETL/Transform_pic_7.png" >
-    <p>8.	Group the data by ‘state’ by summing up the values.</p>    
+    <p>8.	Groupped the data by ‘state’ by summing up the values.</p>    
     <img class="my_img" src="../criselda_ETL/Transform_pic_8.png" >
     <p>9.	Save the dataframe into CSV file as john_hopkins.csv</p>    
     <img class="my_img" src="../criselda_ETL/Transform_pic_9.png" >
-    <p>10.	Merge file to teammates file
     <p><a href = "#top">Top</a></p>
-    <a name="Load"></a><h3>* **L**oad: the final database, tables/collections, and why this was chosen.</h3>
-    <p>1.	Create etl_db in postgres</p>    
+    <h3>Merge: </h3>
+    <p>1.	Create database connection and load the dataframes</p>
+    <img class="my_img" src="../criselda_ETL/Merge_pic_1.png" >
+    <p>2.	Get the teammate’s CSV file, convert to dataframe and load to my database</p>
+    <img class="my_img" src="../criselda_ETL/Merge_pic_2.png" >
+    <p>3.	Merge the two dataframes</p>
+    <img class="my_img" src="../criselda_ETL/Merge_pic_3.png" >
+    <p><a href = "#top">Top</a></p>
+    <a name="Load"></a><h3>Load final tables to database:</h3>
+    <p>1.	Save the merged dataframes as CSV and load to database to be the final table for production.</p>    
     <img class="my_img" src="../criselda_ETL/load_data_1.png" >
-    <img class="my_img" src="../criselda_ETL/load_data_2.png" >
-
+    <p>This type of data was chosen due to the uprising numbers of COVID-19 deaths and infections. My partner and I are mothers who are concerned and looking to learn more on finding the right sources that can provide correct and organized data.</p>
     <P><a href = "#top">Top</a></P>
 </body>
 </html>

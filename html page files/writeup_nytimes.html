@@ -23,7 +23,25 @@
                
             </ul>
          </div>
-
+         <p>
+            <a name="Extract"></a><h3>Extract:</h3> </p>
+            <p> 1.	We have explored the NY Times data from <u> https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html</u>for America’s nursing homes outbreaks surge. </p>
+            <img class="my_img" src="../criselda_ETL/Ny_extract_1.png" >
+           
+            <p>2. As we Inspected through the data and applied some parsing on the data tables. We were only getting 10 out of 732 rows from the HTML site. It is not pulling the whole data table.  </p>
+            <img class="my_img" src="../criselda_ETL/Ny_extract_2.png" >
+            <img class="my_img" src="../criselda_ETL/Ny_extract_3.png" >
+            <img class="my_img" src="../criselda_ETL/Ny_extract_4.png" >
+            <p>We checked using the View Page Source, and saw that after the 10th row, the table ends, and a JSON reference is nested within a script. We explored the JSON reference and it was a dump that contains too much data and it is really hard to figure out how to extract our target. </p>
+            <img class="my_img" src="../criselda_ETL/Ny_extract_5.png" >
+            <p>Then we went back to Inspect the page and seen that part of the script for the tables is Java Script. Hence, we think the process to scrape the data from this website requires further knowledge on Java Script. </p>
+            <img class="my_img" src="../criselda_ETL/Ny_extract_6.png" >
+            <img class="my_img" src="../criselda_ETL/Ny_extract_7.png" >
+            <p><a href = "#top">Top</a></p>
+            <a name="Transform"></a><a name="Load"></a><h3>Transform and Load: </h3>
+            <p>We were not able to Transform and Load the data.</p>
+            <p>This type of data was chosen due to uprising numbers of COVID-19 deaths and infections for Homes and Nurses. Being part of family of nurses, I proposed this type of data to learn more on how to find the right sources that can provide correct and organized data.</p>
+            <P><a href = "#top">Top</a></P>
 
         </body>
         </html>

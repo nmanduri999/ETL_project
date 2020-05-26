@@ -11,11 +11,11 @@
 
 <body>
     <h1 class="text-center" style ="font-size: 2em">
-      <a href="index.html">COVID-19 Stats</a>       
+      COVID-19 Stats       
     </h1>
     <div class="container">
        
-        <h5 class="text-center">April 20th to May 20th</h5><br>
+        <h6 class="text-center">April 20th to May 20th</h6><br>
        
          <div class="row">
             <ul class="navigation">
@@ -29,7 +29,7 @@
                 <p>
                     <h4 class="text-right">Extract</h4>
                    </p> 
-                   <div class="text-right my_class"><u>Finding Datasource:</u><br><a href="https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab" target="_blank">CDC Raw Data</a>&nbsp;&nbsp;<br><a href ="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data" target="_blank">John Hopkins Raw Data</a>&nbsp;&nbsp;&nbsp;&nbsp;<br>Newyorktimes.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br>
+                   <div class="text-right my_class"><u>Finding Datasource:</u><br><a href="https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab" target="_blank">CDC Raw Data</a>&nbsp;&nbsp;<br><a href ="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data" target="_blank">John Hopkins Raw Data</a>&nbsp;&nbsp;&nbsp;&nbsp;<br><a href ="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html" target="_blank">Newyork Times Raw Data</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br>
                    <div class="text-right my_class"><u>Convert Data to DataFrame:</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Convert CSV to Dataframe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> Convert JSON to Dataframe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Convert html to Dataframe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br>
                                 
                    </div>
@@ -40,10 +40,10 @@
               <div class="col-md-4">
                  <p>
                   <h4 class="text-left">Write Up</h4>
-                  <div class="text-left my_class">&nbsp;&nbsp;<a href="writeup_cdc.html">CDC Data Write-up</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="writeup_johnH.html">John Hopkins Data Write-up</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="writeup_Nytimes.html">Ny Times Write-up</a></div><br>
+                  <div class="text-left my_class">&nbsp;&nbsp;<a href="writeup_cdc.html">CDC Data Write-up</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="writeup_johnH.html">John Hopkins Data Write-up</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="writeup_Nytimes.html">NY Times Data Write-up</a></div><br>
                   <h4 class="text-left">&nbsp;Load</h4>
-                  <div class="text-left my_class">&nbsp;&nbsp;Load the DataFrame into database</div>
-                  <div class="text-left my_class">&nbsp;&nbsp;&nbsp;&nbsp;Join both tables on State</div>
+                  <div class="text-left my_class">&nbsp;&nbsp;Load all three DataFrame into database</div>
+                  <div class="text-left my_class">&nbsp;&nbsp;&nbsp;&nbsp;Join CDC and John Hopkins data on State</div>
                   <div class="text-left my_class">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Confirm the table name created in database</div>
                   <div class="text-left my_class">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Backup and restore team members data</div>
                   <div class="text-left my_class">&nbsp;&nbsp;&nbsp;&nbsp;Create a database connection in pandas</div>
@@ -55,6 +55,8 @@
             <div class="col-md-12">
                 <p>
                 <h3 class="text-center">Transform</h3>
+                <div class="text-center">Used generator expression to read the files.</div>
+                <div class="text-center">Used assign() to create a new column</div>
                 <div class="text-center">Rename the columns</div>
                 <div class="text-center">Removed null/Nan values</div>
                 <div class="text-center">Change the data types</div>
