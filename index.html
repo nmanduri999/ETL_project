@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Stats</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+    <h1 class="text-center" style ="font-size: 2em">
+      <a href="index.html">COVID-19 Stats</a>       
+    </h1>
+    <div class="container">
+       
+        <h5 class="text-center">April 20th to May 20th</h5><br>
+       
+         <div class="row">
+            <ul class="navigation">
+               <li><a href="cdc_data.html" >CDC Data Link</a></li>
+               <li><a href="johnH_data.html" >John Hopkins Data Link</a></li>
+               <li><a href="#" >CDC and John Hopkins Data Link</a></li>
+           </ul>
+         </div>
+          <div class="row">
+              <div class="col-md-4">
+                <p>
+                    <h4 class="text-right">Extract</h4>
+                   </p> 
+                   <div class="text-right my_class"><u>Finding Datasource:</u><br><a href="https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab" target="_blank">CDC Raw Data</a>&nbsp;&nbsp;<br><a href ="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data" target="_blank">John Hopkins Raw Data</a>&nbsp;&nbsp;&nbsp;&nbsp;<br>Newyorktimes.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br>
+                   <div class="text-right my_class"><u>Convert Data to DataFrame:</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Convert CSV to Dataframe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> Convert JSON to Dataframe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Convert html to Dataframe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br>
+                                
+                   </div>
+              
+              <div class="col-md-4">
+                <img class="center" src="COVID.png" >      
+              </div>
+              <div class="col-md-4">
+                 <p>
+                  <h4 class="text-left">Write Up</h4>
+                  <div class="text-left my_class">&nbsp;&nbsp;<a href="extract_cdc.html">CDC Data Write-up</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="extract_johnH.html">John Hopkins Data Write-up</a><br></div><br>
+                  <h4 class="text-left">&nbsp;Load</h4>
+                  <div class="text-left my_class">&nbsp;&nbsp;Load the DataFrame into database</div>
+                  <div class="text-left my_class">&nbsp;&nbsp;&nbsp;&nbsp;Join both tables on State</div>
+                  <div class="text-left my_class">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Confirm the table name created in database</div>
+                  <div class="text-left my_class">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Backup and restore team members data</div>
+                  <div class="text-left my_class">&nbsp;&nbsp;&nbsp;&nbsp;Create a database connection in pandas</div>
+                  <div class="text-left my_class">Create a empty database in postgres</div> 
+                 </p>    
+           </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+                <p>
+                <h3 class="text-center">Transform</h3>
+                <div class="text-center">Rename the columns</div>
+                <div class="text-center">Removed null/Nan values</div>
+                <div class="text-center">Change the data types</div>
+                <div class="text-center">Group the data by state</div>
+                 </p>     
+            </div>
+        </div>
+
+      
+    <!-- <div data-post-id="50079" data-site-id="499" class="mb-3"  data-theme="theme-cyan" data-cdc-widget="cdcMaps" data-config-url="/coronavirus/2019-ncov/cases-updates/map-cases-us-manual-desktop.json">
+    </div>
+    <script src="//tools.cdc.gov/TemplatePackage/contrib/widgets/tp-widget-external-loader.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write-up for CDC Datasource</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="text-center" style ="font-size: 2em">
+        CDC Data: Extract/Transform/Load Write-up       
+      </h1>
+    <div class="container">
+            <div class="row">
+            <ul class="navigation">
+                <a name = "Top"></a>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="#Extract">Extract</a></li>
+               <li><a href="#Transform">Transform</a></li>
+               <li><a href="#Load">Load</a></li>
+               
+            </ul>
+         </div>
+    <a name="Extract"></a><h3>Extract the data</h3>
+    <p>Extracted the data from CDC: Centers for Disease Control and Prevention: </p>
+    <p>Deaths involving coronavirus disease 2019 (COVID-19), pneumonia, and influenza reported to NCHS by week ending date and by state</p>
+    <p><a href ="https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab" target="_blank">Link to datasource:</a> <u>https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab</u>. 
+    <p>Data was available for export in various different formats CSV, JSON, RDF, RSS, XML etc. For the purpose of this project Json data was exported.</p>
+    <img class="my_img" src="covid_data_CDC/Extract_data_1.png" >
+    <img class="my_img" src="covid_data_CDC/Extract_data_2.png" ></p>
+    <p><a href = "#top">Top</a></p>
+    <p> 1. Determined link to JSON data</p>
+    <p><a href ="https://data.cdc.gov/api/views/r8kw-7aab/rows.json?accessType=DOWNLOAD" target="_blank">Link to JSON Data:</a> <u>https://data.cdc.gov/api/views/r8kw-7aab/rows.json?accessType=DOWNLOAD</u>. 
+    <p><img class="my_img" src="covid_data_CDC/Extract_data_4.png" ></p>
+    <p> 2. Converted the JSON data in to a datafram in pandas.</p>
+    <img class="my_img" src="covid_data_CDC/Extract_data_3.png" >
+    <a name="Transform"></a><h3>Transform the data</h3>
+    <p>Transfored the data. Steps taken to clean the data.</p>
+    <p> 1. Use iterrows to iterate through pandas datafram to save selected data in the dataframe</p>
+    <p> 2. Striped data from datatime column.</p>
+    <img class="my_img" src="covid_data_CDC/Extract_data_5.png" >
+    <p> 3. Removed null values.</p>
+    <img class="my_img" src="covid_data_CDC/Extract_data_6.png" >
+    <p> 4. Changes the type usinf astype.</p>
+    <img class="my_img" src="covid_data_CDC/Extract_data_7.png" >
+    <p> 5. Grouping the data by state and getting the sum of the values.</p>
+    <img class="my_img" src="covid_data_CDC/Extract_data_8.png" >
+    <p><a href = "#top">Top</a></p>   
+    <a name="Load"></a><h3>Load the data</h3>
+    <p>Load the data into a database. Steps taken to load the data.</p>
+    <p><a href = "#top">Top</a></p>
+
+</body>
+</html>
